@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 const Home = () => {
     return (
         <div className="min-h-screen">
@@ -8,7 +9,7 @@ const Home = () => {
             <section className="bg-gradient-to-r from-green-600 to-green-400 text-white">
                 <div className="container mx-auto px-4 py-20">
                     <div className="max-w-4xl mx-auto text-center">
-                        <h1 className="text-5xl font-bold mb-6">
+                        <h1 className="text-5xl font-bold mb-20">
                             Fresh Organic Products
                         </h1>
                         <p className="text-xl mb-8 opacity-90">

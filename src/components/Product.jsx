@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import Cart from './Cart';
+import avalImg from "../img/aval.jpg"
+import sugar from "../img/sugar2.png"
+
 
 const Product = ({ addToCart, cart, updateQuantity, isCartOpen, setIsCartOpen, getCartTotal, removeFromCart }) => {
     const [products] = useState([
@@ -7,7 +10,7 @@ const Product = ({ addToCart, cart, updateQuantity, isCartOpen, setIsCartOpen, g
             id: 1,
             name: "Organic Apples",
             price: 4.99,
-            image: "https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=400&h=300&fit=crop",
+            image: avalImg,
             description: "Fresh organic apples from local farms",
             category: "Fruits"
         },
@@ -15,7 +18,7 @@ const Product = ({ addToCart, cart, updateQuantity, isCartOpen, setIsCartOpen, g
             id: 2,
             name: "Organic Bananas",
             price: 2.99,
-            image: "https://images.unsplash.com/photo-1603833665858-e61d17a86224?w=400&h=300&fit=crop",
+            image: sugar,
             description: "Ripe organic bananas, perfect for smoothies",
             category: "Fruits"
         },
