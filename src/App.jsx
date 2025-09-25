@@ -1,8 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Product from './components/Product';
-import Home from './components/Home';
+import React, { useState, useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Product from "./components/Product";
+import Home from "./components/Home";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -10,10 +15,10 @@ function App() {
 
   // Add item to cart
   const addToCart = (product) => {
-    setCart(prevCart => {
-      const existingItem = prevCart.find(item => item.id === product.id);
+    setCart((prevCart) => {
+      const existingItem = prevCart.find((item) => item.id === product.id);
       if (existingItem) {
-        return prevCart.map(item =>
+        return prevCart.map((item) =>
           item.id === product.id
             ? { ...item, quantity: item.quantity + 1 }
             : item
@@ -30,21 +35,19 @@ function App() {
       removeFromCart(id);
       return;
     }
-    setCart(prevCart =>
-      prevCart.map(item =>
-        item.id === id ? { ...item, quantity } : item
-      )
+    setCart((prevCart) =>
+      prevCart.map((item) => (item.id === id ? { ...item, quantity } : item))
     );
   };
 
   // Remove item from cart
   const removeFromCart = (id) => {
-    setCart(prevCart => prevCart.filter(item => item.id !== id));
+    setCart((prevCart) => prevCart.filter((item) => item.id !== id));
   };
 
   // Get cart total
   const getCartTotal = () => {
-    return cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+    return cart.reduce((total, item) => total + item.price * item.quantity, 0);
   };
 
   // Get cart item count
@@ -55,16 +58,16 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gray-50">
-        <Navbar 
+        <Navbar
           cartCount={getCartItemCount()}
           onCartClick={() => setIsCartOpen(true)}
         />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route 
-            path="/products" 
+          <Route
+            path="/products"
             element={
-              <Product 
+              <Product
                 addToCart={addToCart}
                 cart={cart}
                 updateQuantity={updateQuantity}
@@ -73,7 +76,7 @@ function App() {
                 getCartTotal={getCartTotal}
                 removeFromCart={removeFromCart}
               />
-            } 
+            }
           />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
