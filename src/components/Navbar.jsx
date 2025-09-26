@@ -7,7 +7,7 @@ const Navbar = ({ cartCount, onCartClick }) => {
     return (
         <nav className="bg-white shadow-lg sticky top-0 z-40">
             <div className="container mx-auto px-4">
-                <div className="flex items-center justify-between h-16">
+                <div className="flex items-center justify-between h-16 ">
                     {/* Logo */}
                     <Link to="/" className="flex items-center space-x-2">
                         <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">

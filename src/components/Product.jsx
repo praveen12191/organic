@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 import Cart from './Cart';
+import avalImg from "../img/aval.jpg"
+import sugar from "../img/sugar.png"
+import kavuni from "../img/kavuni_aval.png"
+import samba from "../img/samba_rice.png"
+
 
 const Product = ({ addToCart, cart, updateQuantity, isCartOpen, setIsCartOpen, getCartTotal, removeFromCart }) => {
     const [products] = useState([
@@ -7,7 +12,7 @@ const Product = ({ addToCart, cart, updateQuantity, isCartOpen, setIsCartOpen, g
             id: 1,
             name: "Organic Apples",
             price: 4.99,
-            image: "https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=400&h=300&fit=crop",
+            image: avalImg,
             description: "Fresh organic apples from local farms",
             category: "Fruits"
         },
@@ -15,7 +20,7 @@ const Product = ({ addToCart, cart, updateQuantity, isCartOpen, setIsCartOpen, g
             id: 2,
             name: "Organic Bananas",
             price: 2.99,
-            image: "https://images.unsplash.com/photo-1603833665858-e61d17a86224?w=400&h=300&fit=crop",
+            image: sugar,
             description: "Ripe organic bananas, perfect for smoothies",
             category: "Fruits"
         },
@@ -23,7 +28,7 @@ const Product = ({ addToCart, cart, updateQuantity, isCartOpen, setIsCartOpen, g
             id: 3,
             name: "Organic Carrots",
             price: 3.49,
-            image: "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?w=400&h=300&fit=crop",
+            image: kavuni,
             description: "Crunchy organic carrots rich in vitamins",
             category: "Vegetables"
         },
@@ -31,16 +36,8 @@ const Product = ({ addToCart, cart, updateQuantity, isCartOpen, setIsCartOpen, g
             id: 4,
             name: "Organic Spinach",
             price: 5.99,
-            image: "https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=400&h=300&fit=crop",
+            image: samba,
             description: "Fresh organic spinach leaves",
-            category: "Vegetables"
-        },
-        {
-            id: 5,
-            name: "Organic Tomatoes",
-            price: 6.99,
-            image: "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=400&h=300&fit=crop",
-            description: "Juicy organic tomatoes perfect for salads",
             category: "Vegetables"
         }
     ]);
