@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import logo from "../img/logo.jpeg";
 
 const Navbar = ({ cartCount, onCartClick }) => {
   const location = useLocation();
@@ -11,7 +12,7 @@ const Navbar = ({ cartCount, onCartClick }) => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <img
-              src="/src/img/logo.jpeg"
+              src={logo}
               alt="Organic Store Logo"
               className="w-10 h-10 rounded-full object-cover"
             />
