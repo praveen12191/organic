@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Navbar from './components/Navbar';
 import Product from './components/Product';
 import Home from './components/Home';
+import Email from './components/email';
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -76,6 +77,7 @@ function App() {
             } 
           />
           <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="/email" element={<Email />} />
         </Routes>
       </div>
     </Router>

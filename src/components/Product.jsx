@@ -10,35 +10,27 @@ const Product = ({ addToCart, cart, updateQuantity, isCartOpen, setIsCartOpen, g
     const [products] = useState([
         {
             id: 1,
-            name: "Organic Apples",
-            price: 4.99,
+            name: "Karuppu Kavuni Aval",
+            price: 160,
             image: avalImg,
-            description: "Fresh organic apples from local farms",
-            category: "Fruits"
+            description: "It retains its earthy flavor and natural nutrients in the flattened form",
+            category: "Aval"
         },
         {
             id: 2,
-            name: "Organic Bananas",
-            price: 2.99,
+            name: "Country Sugar",
+            price: 100,
             image: sugar,
-            description: "Ripe organic bananas, perfect for smoothies",
-            category: "Fruits"
-        },
-        {
-            id: 3,
-            name: "Organic Carrots",
-            price: 3.49,
-            image: kavuni,
-            description: "Crunchy organic carrots rich in vitamins",
-            category: "Vegetables"
+            description: "Country sugar, also known as Nattu Sakkarai, is a traditional unrefined sweetener",
+            category: "Sugar"
         },
         {
             id: 4,
-            name: "Organic Spinach",
-            price: 5.99,
+            name: "Mappillai Samba Rice",
+            price: 100,
             image: samba,
-            description: "Fresh organic spinach leaves",
-            category: "Vegetables"
+            description: "Its name means “Bridegroom’s Rice” as it was believed to give strength and stamina",
+            category: "Rice"
         }
     ]);
 
@@ -90,7 +82,7 @@ const Product = ({ addToCart, cart, updateQuantity, isCartOpen, setIsCartOpen, g
                             <h3 className="text-xl font-semibold text-gray-800 mb-2">{product.name}</h3>
                             <p className="text-gray-600 mb-4">{product.description}</p>
                             <div className="flex items-center justify-between mb-4">
-                                <span className="text-2xl font-bold text-green-600">${product.price}</span>
+                                <span className="text-2xl font-bold text-green-600">₹{product.price}</span>
                             </div>
                             
                             {/* Quantity selector */}

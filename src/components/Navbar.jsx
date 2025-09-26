@@ -24,7 +24,7 @@ const Navbar = ({ cartCount, onCartClick }) => {
           <div className="hidden md:flex items-center space-x-8">
             <Link
               to="/"
-              className={`font-medium transition-colors duration-200 ${
+              className={`font-medium transition-colors duration-200 {
                 location.pathname === "/"
                   ? "text-green-600 border-b-2 border-green-600"
                   : "text-gray-700 hover:text-green-600"
