@@ -6,21 +6,29 @@ const Home = () => {
     return (
         <div className="min-h-screen">
             {/* Hero Section */}
-            <section className="bg-gradient-to-r from-green-600 to-green-400 text-white">
+            <section 
+                className="relative text-white min-h-screen flex items-center"
+                style={{
+                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat'
+                }}
+            >
                 <div className="container mx-auto px-4 py-20">
                     <div className="max-w-4xl mx-auto text-center">
-                        <h1 className="text-5xl font-bold mb-20">
-                            Fresh Organic Products
+                        <h1 className="text-5xl font-bold mb-6">
+                            Premium Organic Products
                         </h1>
                         <p className="text-xl mb-8 opacity-90">
-                            Discover the finest selection of organic fruits and vegetables, 
-                            grown with love and care for your health and the environment.
+                            Discover our carefully curated selection of organic rice varieties, 
+                            natural sugars, and traditional grains - pure, healthy, and sustainably sourced.
                         </p>
                         <Link
                             to="/products"
-                            className="inline-block bg-white text-green-600 font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors duration-200 text-lg"
+                            className="inline-block bg-green-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-green-700 transition-colors duration-200 text-lg shadow-lg"
                         >
-                            Shop Now
+                            Explore Our Catalog
                         </Link>
                     </div>
                 </div>
@@ -30,9 +38,10 @@ const Home = () => {
             <section className="py-16 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold text-gray-800 mb-4">Why Choose Organic?</h2>
+                        <h2 className="text-3xl font-bold text-gray-800 mb-4">Why Choose Our Organic Products?</h2>
                         <p className="text-gray-600 max-w-2xl mx-auto">
-                            Our organic products are carefully selected to provide you with the best quality and taste.
+                            From traditional rice varieties to natural sweeteners, our organic products are carefully sourced 
+                            to bring you authentic, healthy, and nutritious options for your family.
                         </p>
                     </div>
                     
@@ -43,9 +52,10 @@ const Home = () => {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-semibold text-gray-800 mb-2">100% Organic</h3>
+                            <h3 className="text-xl font-semibold text-gray-800 mb-2">100% Natural</h3>
                             <p className="text-gray-600">
-                                All our products are certified organic, grown without harmful pesticides or chemicals.
+                                Our rice varieties, natural sugars, and traditional grains are completely organic, 
+                                processed without chemicals or artificial additives.
                             </p>
                         </div>
                         
@@ -55,9 +65,10 @@ const Home = () => {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-semibold text-gray-800 mb-2">Fresh Daily</h3>
+                            <h3 className="text-xl font-semibold text-gray-800 mb-2">Traditional Quality</h3>
                             <p className="text-gray-600">
-                                We source our products daily from local organic farms to ensure maximum freshness.
+                                Sourced directly from trusted organic farms, our products maintain their traditional 
+                                nutritional value and authentic taste.
                             </p>
                         </div>
                         
@@ -67,9 +78,10 @@ const Home = () => {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-semibold text-gray-800 mb-2">Eco-Friendly</h3>
+                            <h3 className="text-xl font-semibold text-gray-800 mb-2">Health Focused</h3>
                             <p className="text-gray-600">
-                                Our sustainable farming practices help protect the environment for future generations.
+                                Rich in nutrients and free from processing chemicals, our organic grains and natural 
+                                products support a healthy lifestyle.
                             </p>
                         </div>
                     </div>
@@ -80,16 +92,17 @@ const Home = () => {
             <section className="py-16 bg-gray-50">
                 <div className="container mx-auto px-4 text-center">
                     <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                        Ready to Start Your Organic Journey?
+                        Experience Pure Organic Goodness
                     </h2>
                     <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-                        Browse our collection of fresh organic produce and start living healthier today.
+                        Explore our premium collection of organic rice, natural sugars, and traditional grains. 
+                        Start your journey to healthier eating with our authentic organic products.
                     </p>
                     <Link
                         to="/products"
                         className="inline-block bg-green-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-green-700 transition-colors duration-200 text-lg"
                     >
-                        Browse Products
+                        Shop Our Catalog
                     </Link>
                 </div>
             </section>
