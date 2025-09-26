@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import product from "../img/productCatalog.jpeg"
+
 
 const Home = () => {
   return (
@@ -97,6 +99,13 @@ const Home = () => {
           </Link>
         </div>
       </section>
+      <section className="bg-gray-100 py-8 flex justify-center">
+  <img
+    src={product} // replace with your image path
+    alt="Pricing"
+    className="max-w-3xl w-full rounded-lg shadow-md"
+  />
+</section>
 
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-6 mt-auto">
